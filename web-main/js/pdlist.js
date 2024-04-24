@@ -6,6 +6,7 @@ const listpd = document.getElementById("listpd");
 const params = new URLSearchParams(window.location.search);
 const typeQuery = params.get("pd");
 
+console.log(typeQuery);
 switch (typeQuery) {
   case "balo":
     var productData = listBaloJson;

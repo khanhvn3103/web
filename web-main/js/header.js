@@ -5,4 +5,4 @@ setTimeout(() => {
     console.log("asdhkgfas");
     window.location.href = "listProduct.html?pd=balo";
   });
-}, 1000);
+}, 500);

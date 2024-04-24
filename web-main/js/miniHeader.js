@@ -7,4 +7,4 @@ setTimeout(() => {
           document.getElementById('miniHeader').style.display = 'none';
         }
       });
-}, 1000);
+}, 500);

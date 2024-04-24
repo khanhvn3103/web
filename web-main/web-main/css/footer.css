@@ -1,0 +1,25 @@
+#contain{
+  min-height: 60vh;
+}
+#footer {
+  background-color: rgba(51, 51, 51, 1);
+  min-height: 30vh;
+  color: #fff;
+  padding-top: 30px;
+}
+#logofooter {
+  max-width: 100%;
+}
+#footer cusicon {
+  font-size: large;
+}
+#footer a {
+  color: aliceblue;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #0a58ca;
+}
+#footer li {
+  list-style-type: none;
+}

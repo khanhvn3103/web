@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="../css/miniHeader.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="icon" href="../img/icon.ico" />
-    <script
-      src="https://kit.fontawesome.com/c8c0e8881c.js"
-      crossorigin="anonymous"
-    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -42,68 +38,31 @@
     <div id="header"></div>
     <div id="miniHeader" style="display: none"></div>
     <div id="contain" class="container">
-      <div
-    id="carouselExampleInterval"
-    class="carousel slide my-3"
-    data-bs-ride="carousel"
-  >
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="3000">
-        <img src="../img/chair.jpg" class="d-block w-100" alt="..." />
+      <div class="row mt-3">
+        <img src="../img/62-1920x200.jpg" alt="" />
       </div>
-      <div class="carousel-item" data-bs-interval="3000">
-        <img src="../img/coffe.jpg" class="d-block w-100" alt="..." />
-      </div>
-      <div class="carousel-item" data-bs-interval="3000">
-        <img src="../img/typemc.jpg" class="d-block w-100" alt="..." />
-      </div>
-      <div class="carousel-item" data-bs-interval="3000">
-        <img src="../img/pen.jpg" class="d-block w-100" alt="..." />
-      </div>
-    </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carouselExampleInterval"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselExampleInterval"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
       <div class="row mt-3">
         <div id="listpd" class="row col-9"></div>
         <div class="col-3">
-          <h4 class="mb-3">Sắp xếp theo giá tiền</h4>
+          <h4 class="mb-3">Sắp xếp</h4>
           <div class="list-group">
             <label class="list-group-item">
               <input
                 class="form-check-input me-1"
                 type="radio"
                 name="sort"
-                value="sortMinMax"
                 id="sortMinMax"
               />
-              Từ bé đến lớn
+              Sắp xếp từ bé đến lớn
             </label>
             <label class="list-group-item">
               <input
                 class="form-check-input me-1"
                 type="radio"
                 name="sort"
-                value="sortMaxMin"
                 id="sortMaxMin"
               />
-              Từ lớn đến bé
+              Sắp xếp từ lớn đến bé
             </label>
           </div>
           <h4 class="mb-3">Lọc</h4>
@@ -114,7 +73,6 @@
                 type="radio"
                 name="filter"
                 id="filterBalo"
-                onchange="gotolink('./listProduct.html?pd=balo')"
               />
               Balo
             </label>
@@ -124,7 +82,6 @@
                 type="radio"
                 name="filter"
                 id="filterMocKhoa"
-                onchange="gotolink('./listProduct.html?pd=moc-khoa')"
               />
               Móc Khóa
             </label>
@@ -134,7 +91,6 @@
                 type="radio"
                 name="filter"
                 id="filterBut"
-                onchange="gotolink('./listProduct.html?pd=but')"
               />
               Bút
             </label>
@@ -144,7 +100,6 @@
                 type="radio"
                 name="filter"
                 id="filterVo"
-                onchange="gotolink('./listProduct.html?pd=vo')"
               />
               Sổ, Vở
             </label>
@@ -157,45 +112,4 @@
   <script src="../js/header.js"></script>
   <script src="../js/miniHeader.js"></script>
   <script src="../js/pdlist.js" type="module"></script>
-  <script>
-    function gotolink(url) {
-      window.location.href = url;
-    }
-
-    document.querySelectorAll('input[name="sort"]').forEach((radio) => {
-      radio.addEventListener("change", function () {
-        sortProducts(this.value);
-      });
-    });
-
-    function sortProducts(sortBy) {
-      const listpd = document.getElementById("listpd");
-      const pd = Array.from(listpd.children);
-
-      pd.sort((a, b) => {
-        const aValue = parseFloat(
-          a
-            .querySelector(".pdprice")
-            .innerText.replace("đ", "")
-            .replace(",", "")
-        );
-        const bValue = parseFloat(
-          b
-            .querySelector(".pdprice")
-            .innerText.replace("đ", "")
-            .replace(",", "")
-        );
-
-        if (sortBy === "sortMinMax") {
-          return aValue - bValue;
-        } else if (sortBy === "sortMaxMin") {
-          return bValue - aValue;
-        }
-      });
-
-      pd.forEach((product) => {
-        listpd.appendChild(product);
-      });
-    }
-  </script>
 </html>
