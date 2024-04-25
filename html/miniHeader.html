@@ -15,14 +15,14 @@
           <i class="fa-solid fa-house"></i> Trang Chủ
         </a>
         <a
-        id="btn-registermn"
+          id="btn-registermn"
           href="./register.html#contain"
           class="col-lg-3 col-md-4 text-center minibtnctr"
         >
           <i class="fa-solid fa-lock"></i> Đăng ký
         </a>
         <a
-        id="btn-loginmn"
+          id="btn-loginmn"
           href="./login.html#contain"
           class="col-lg-3 col-md-4 text-center minibtnctr"
         >
@@ -70,3 +70,22 @@
     </div>
   </div>
 </div>
+<script>
+  function loginHeader() {
+    const isLoggedIn = localStorage.getItem("isLogin") === "true";
+    console.log(isLoggedIn);
+    const loginButton = document.getElementById("btn-loginmn");
+    const registerButton = document.getElementById("btn-registermn");
+
+    if (isLoggedIn) {
+      // Đã đăng nhập
+      loginButton.style.display = "none"; // Ẩn nút đăng nhập
+      registerButton.style.display = "none"; // Ẩn nút đăng ký
+    } else {
+      // Chưa đăng nhập
+      loginButton.style.display = "block"; // Hiển thị nút đăng nhập
+      registerButton.style.display = "block"; // Hiển thị nút đăng ký
+    }
+  }
+  loginHeader();
+</script>

@@ -121,15 +121,15 @@ setTimeout(() => {
       )
       .join("");
   }, 1000);
-  window.onload = function() {
+  window.onload = function () {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     const loginButtonHome = document.getElementById("btn-loginHome");
     const registerButtonHome = document.getElementById("btn-registerHome");
 
     if (isLoggedIn) {
-        // Đã đăng nhập
-        loginButtonHome.style.display = "none"; // Ẩn nút đăng nhập
-        registerButtonHome.style.display = "none"; // Ẩn nút đăng ký
+      // Đã đăng nhập
+      loginButtonHome.style.display = "none"; // Ẩn nút đăng nhập
+      registerButtonHome.style.display = "none"; // Ẩn nút đăng ký
     }
-};
+  };
 }, 1000);

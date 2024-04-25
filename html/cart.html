@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../css/miniHeader.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="icon" href="../img/icon.ico" />
-    <script src="https://kit.fontawesome.com/c8c0e8881c.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c8c0e8881c.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -37,7 +40,89 @@
   <body>
     <div id="header"></div>
     <div id="miniHeader" style="display: none"></div>
-    <div id="contain"></div>
+    <div id="contain" class="container">
+      <div class="row mt-3">
+        <div class="col-7">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Hình ảnh</th>
+                  <th scope="col">Tên sản phẩm</th>
+                  <th scope="col">Giá tiền</th>
+                  <th scope="col">Số lượng</th>
+                  <th scope="col">Tổng tiền</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item">
+                  <td scope="row">
+                    <img
+                      style="width: 200px; height: 200px; object-fit: cover"
+                      src="https://pos.nvncdn.com/0d9756-7239/ps/20231108_h197MhhBi4.jpeg"
+                      alt="Móc khoá bông vẫy đuôi Heo Hồng có cánh và Gấu Trúc Panda Chó Mèo Thỏ dễ thương - 10cm"
+                    />
+                  </td>
+                  <td>
+                    <p style="max-width: 200px; max-height: 200px">
+                      Móc khoá bông vẫy đuôi Heo Hồng có cánh và Gấu Trúc Panda
+                      Chó Mèo Thỏ dễ thương - 10cm
+                    </p>
+                  </td>
+                  <td>83000</td>
+                  <td>
+                    <button style="width: 30px; height: 30px">-</button>
+                    <span>10</span>
+                    <button style="width: 30px; height: 30px">+</button>
+                  </td>
+                  <td>830000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-6">
+              <h4><b>Tổng tiền:</b></h4>
+            </div>
+            <div class="col-6 fs-4">830000</div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <h4><b>Các hình thức thanh toán</b></h4>
+            </div>
+          </div>
+          <div class="row" style="width: 75%">
+            <div class="col">
+              <div class="list-group">
+                <label class="list-group-item">
+                  <input
+                    class="form-check-input me-1"
+                    type="radio"
+                    name="payments"
+                    value="cash"
+                    id="cash"
+                  />
+                  Thanh toán khi nhận hàng
+                </label>
+                <label class="list-group-item">
+                  <input
+                    class="form-check-input me-1"
+                    type="radio"
+                    name="payments"
+                    value="visa"
+                    id="visa"
+                  />
+                  Visa
+                </label>
+              </div>
+              <button class="btn btn-primary mt-3">Thanh Toán</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="footer"></div>
   </body>
   <script src="../js/header.js"></script>

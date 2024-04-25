@@ -32,12 +32,23 @@ if (dataForType) {
           <h3 class="text-danger">${price.toLocaleString()}đ</h3>
         </div>
         <div class="row">
-          <button class="btn mx-1" style="background-color: #e64c65; color: #fff; max-width: 40%;">Thêm vào giỏ hàng</button>
-          <button class="btn mx-1" style="background-color: #e64c65; color: #fff; max-width: 40%;">Đặt hàng</button>
+          <button class="btn mx-1" style="background-color: #e64c65; color: #fff; max-width: 40%;" onclick="addcart(dataForType)">Thêm vào giỏ hàng</button>
+          <button class="btn mx-1" style="background-color: #e64c65; color: #fff; max-width: 40%;" onclick="buycart(dataForType)">Đặt hàng</button>
         </div>
       </div>
       <div class="col-1"></div>
     </div>`;
 } else {
   listpd.innerHTML = "<p>Dữ liệu không tồn tại.</p>";
+}
+function addcart(dataForType) {
+  let carts = JSON.parse(localStorage.getItem("carts")) || [];
+  carts.push(dataForType);
+  localStorage.setItem("carts", JSON.stringify(carts));
+}
+function buycart(dataForType) {
+  let carts = JSON.parse(localStorage.getItem("carts")) || [];
+  carts.push(dataForType);
+  localStorage.setItem("carts", JSON.stringify(carts));
+  window.location.href = "./cart.html";
 }

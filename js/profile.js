@@ -1,7 +1,9 @@
 const pf = document.getElementById("pf");
-const { name, email, phone, address} = JSON.parse(localStorage.getItem("userLogin")) ;
+const { name, email, phone, address } = JSON.parse(
+  localStorage.getItem("userLogin")
+);
 console.log(name);
-  pf.innerHTML = `
+pf.innerHTML = `
     <div class="row">
         <div class="col-md-3">
             <div id="headerProfile" class="text-center">
