@@ -6,7 +6,6 @@ const listpd = document.getElementById("listpd");
 const params = new URLSearchParams(window.location.search);
 const typeQuery = params.get("pd");
 
-console.log(typeQuery);
 switch (typeQuery) {
   case "balo":
     var productData = listBaloJson;
@@ -45,7 +44,7 @@ listpd.innerHTML = productData
               style="width: 100%; height: 250px; object-fit: cover"
               class="pdimg img-responsive"
             />
-            <p class="pdname px-3" style="height: 50px">${items.name}</p>
+            <p class="pdname px-3" style="height: 80px">${items.name}</p>
             <i class="pdprice text-danger px-3">${items.price.toLocaleString()}đ</i>
           </a>
         </div>

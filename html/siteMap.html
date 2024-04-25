@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="../css/miniHeader.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="icon" href="../img/icon.ico" />
+    <script
+      src="https://kit.fontawesome.com/c8c0e8881c.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -51,13 +55,13 @@
     <div id="header"></div>
     <div id="miniHeader" style="display: none"></div>
     <div id="contain" class="container">
-      <div class="fs-3 text-center">
+      <div class="fs-3">
         <ul>
           <li><a href="../index.html">Trang chủ</a></li>
           <li>
             <a onclick="showmore()"
-              >Sản Phẩm<i id="arrow" class="fa-solid fa-angle-down fs-5"></i
-            ></a>
+              ><i id="arrow" class="fa-solid fa-plus fs-5"></i> Sản Phẩm
+            </a>
             <ul id="more" style="display: none">
               <li><a href="./listProduct.html?pd=balo">Balo</a></li>
               <li><a href="./listProduct.html?pd=moc-khoa">Móc Khóa</a></li>
@@ -73,7 +77,6 @@
     <div id="footer"></div>
   </body>
   <script src="../js/header.js"></script>
-  <script src="../js/footer.js"></script>
   <script src="../js/miniHeader.js"></script>
   <script>
     var on = false;
@@ -83,13 +86,13 @@
       var arrow = document.getElementById("arrow");
       if (on == false) {
         on = true;
-        arrow.classList.remove("fa-angle-down")
-        arrow.classList.add("fa-angle-up")
+        arrow.classList.remove("fa-plus");
+        arrow.classList.add("fa-minus");
         more.style.display = "block";
       } else {
         on = false;
-        arrow.classList.remove("fa-angle-up")
-        arrow.classList.add("fa-angle-down")
+        arrow.classList.remove("fa-minus");
+        arrow.classList.add("fa-plus");
         more.style.display = "none";
       }
     }
