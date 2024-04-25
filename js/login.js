@@ -13,8 +13,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
     if (user) {
         login()
-        alert("Đăng nhập thành công!");
-        // Chuyển hướng người dùng đến trang chính sau khi đăng nhập thành công
+        localStorage.setItem("userLogin",JSON.stringify(user));
         window.location.href = "../index.html";
     } else {
         alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
@@ -22,11 +21,5 @@ document.querySelector("form").addEventListener("submit", function(event) {
 });
 function login() {
     localStorage.setItem('isLogin', 'true');
-}
-function isLoggedIn() {
-    return localStorage.getItem('isLogin') === 'true';
-}
-function logout() {
-    localStorage.removeItem('isLogin');
 }
 
