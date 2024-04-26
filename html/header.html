@@ -121,7 +121,7 @@
           placeholder="Tìm kiếm"
           class="form-control text-light"
         />
-        <button type="button" class="btn text-light">
+        <button type="button" class="btn text-light" onclick="search()">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
@@ -177,5 +177,20 @@
     localStorage.removeItem("isLogin");
     localStorage.removeItem("userLogin");
     localStorage.removeItem("carts");
+  }
+  function search() {
+    var input = document.getElementById("search-input");
+    var inputValue = input.value.trim();
+    if (inputValue !== "") {
+      var inputValue = input.value;
+      // Xóa dữ liệu cũ (nếu có)
+      localStorage.removeItem("searchValue");
+
+      // Lưu giá trị mới vào localStorage với một key cố định (ví dụ: "searchValue")
+      localStorage.setItem("searchValue", inputValue);
+
+      // Hiển thị thông báo hoặc thực hiện các hành động khác nếu cần
+      window.location.href = "./search.html";
+    }
   }
 </script>
