@@ -150,17 +150,22 @@ const clickInterval = 500;
 
 // Hàm xử lý khi người dùng click vào nút thanh toán
 const handlePayment = () => {
-  localStorage.removeItem("payment");
-  // Lấy giá trị của radio button được chọn
-  const selectedPayment = document.querySelector(
-    'input[name="payments"]:checked'
-  ).value;
+  const isLoggedIn = localStorage.getItem("isLogin") === "true";
+  if (!isLoggedIn) {
+    window.location.href = "./login.html";
+  } else {
+    localStorage.removeItem("payment");
+    // Lấy giá trị của radio button được chọn
+    const selectedPayment = document.querySelector(
+      'input[name="payments"]:checked'
+    ).value;
 
-  // Lưu giá trị của radio button được chọn vào localStorage
-  localStorage.setItem("payment", selectedPayment);
+    // Lưu giá trị của radio button được chọn vào localStorage
+    localStorage.setItem("payment", selectedPayment);
 
-  // Chuyển hướng hoặc thực hiện các thao tác khác liên quan đến thanh toán
-  window.location.href = "./payment.html";
+    // Chuyển hướng hoặc thực hiện các thao tác khác liên quan đến thanh toán
+    window.location.href = "./payment.html";
+  }
 };
 
 // Gán sự kiện cho nút thanh toán

@@ -132,4 +132,4 @@ setTimeout(() => {
       registerButtonHome.style.display = "none"; // Ẩn nút đăng ký
     }
   };
-}, 1000);
+}, 2000);

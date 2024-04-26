@@ -4,4 +4,4 @@ setTimeout(() => {
     event.preventDefault();
     window.location.href = "listProduct.html?pd=balo";
   });
-}, 1000);
+}, 2000);
