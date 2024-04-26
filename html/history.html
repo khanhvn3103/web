@@ -40,9 +40,48 @@
   <body>
     <div id="header"></div>
     <div id="miniHeader" style="display: none"></div>
-    <div id="contain"></div>
+    <div id="contain" class="container">
+      <h1 class="mt-3">Order History</h1>
+      <table class="table mt-3">
+        <thead>
+          <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col">Date</th>
+            <th scope="col">Total</th>
+            <th scope="col">Payment Method</th>
+          </tr>
+        </thead>
+        <tbody id="orderList"></tbody>
+      </table>
+    </div>
     <div id="footer"></div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="orderDetailModal"
+      tabindex="-1"
+      aria-labelledby="orderDetailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="orderDetailModalLabel">Order Detail</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="orderDetailContent">
+            <!-- Chi tiết sản phẩm sẽ được thêm vào đây -->
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="../js/header.js"></script>
   <script src="../js/miniHeader.js"></script>
+  <script src="../js/history.js"></script>
 </html>

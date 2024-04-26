@@ -71,7 +71,7 @@
   </div>
 </div>
 <script>
-  function loginHeader() {
+  function loginMiniHeader() {
     const isLoggedIn = localStorage.getItem("isLogin") === "true";
     console.log(isLoggedIn);
     const loginButton = document.getElementById("btn-loginmn");
@@ -87,5 +87,5 @@
       registerButton.style.display = "block"; // Hiển thị nút đăng ký
     }
   }
-  loginHeader();
+  loginMiniHeader();
 </script>

@@ -40,9 +40,97 @@
   <body>
     <div id="header"></div>
     <div id="miniHeader" style="display: none"></div>
-    <div id="contain"></div>
+    <div id="contain">
+      <div class="container">
+        <div class="row mt-3">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Hình ảnh</th>
+                  <th scope="col">Tên sản phẩm</th>
+                  <th scope="col">Giá tiền</th>
+                  <th scope="col">Số lượng</th>
+                  <th scope="col">Tổng tiền</th>
+                </tr>
+              </thead>
+              <tbody id="item">
+                <tr>
+                  <td scope="row">
+                    <img
+                      style="width: 200px; height: 200px; object-fit: cover"
+                      src="https://pos.nvncdn.com/0d9756-7239/ps/20231108_h197MhhBi4.jpeg"
+                      alt="Móc khoá bông vẫy đuôi Heo Hồng có cánh và Gấu Trúc Panda Chó Mèo Thỏ dễ thương - 10cm"
+                    />
+                  </td>
+                  <td>
+                    <p style="max-width: 400px; max-height: 200px">
+                      Móc khoá bông vẫy đuôi Heo Hồng có cánh và Gấu Trúc Panda
+                      Chó Mèo Thỏ dễ thương - 10cm
+                    </p>
+                  </td>
+                  <td>83000</td>
+                  <td>10</td>
+                  <td>830000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row mt-1">
+            <div class="col-8">
+              <h4><b>Tổng tiền:</b></h4>
+            </div>
+            <div class="col-4 fs-4" id="total-price">1660000</div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-8">
+              <h4><b>Hình thức thanh toán</b></h4>
+            </div>
+            <div class="col-4 fs-4" id="payment">Thanh toán khi nhận hàng</div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-8">
+              <h4><b>Tên người nhận hàng</b></h4>
+            </div>
+            <input
+              type="text"
+              class="col-4"
+              id="name"
+              value="Nguyễn Huỳnh Đan Khánh"
+              placeholder="Vui lòng nhập tên"
+            />
+          </div>
+          <div class="row mt-1">
+            <div class="col-8">
+              <h4><b>Số điện thoại đặt hàng</b></h4>
+            </div>
+            <input
+              type="text"
+              class="col-4"
+              id="phone"
+              value="0933792143"
+              placeholder="Vui lòng nhập số điện thoại"
+            />
+          </div>
+          <div class="row mt-1">
+            <div class="col-8">
+              <h4><b>Địa chỉ nhận hàng</b></h4>
+            </div>
+            <input
+              type="text"
+              class="col-4"
+              id="address"
+              value="Gò Vấp"
+              placeholder="Vui lòng nhập địa chỉ"
+            />
+          </div>
+          <button id="conform" class="btn btn-primary mt-3">Xác nhận</button>
+        </div>
+      </div>
+    </div>
     <div id="footer"></div>
   </body>
   <script src="../js/header.js"></script>
   <script src="../js/miniHeader.js"></script>
+  <script type="module" src="../js/payment.js"></script>
 </html>
