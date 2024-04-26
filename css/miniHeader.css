@@ -28,6 +28,19 @@
   border-radius: 25px;
   margin-top: 5px;
 }
+#mnsearch-input {
+  margin: 5px;
+  border: navajowhite;
+  background-color: #000;
+  color: white;
+  border-radius: 25px 0 0 25px;
+}
+#mnsearch-input:focus {
+  box-shadow: none;
+}
+#mnsearch-input::placeholder {
+  color: white;
+}
 #minisearch-input {
   margin: 5px;
   border: navajowhite;
